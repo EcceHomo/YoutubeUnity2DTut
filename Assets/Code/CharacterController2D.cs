@@ -13,10 +13,12 @@ public class CharacterController2D : MonoBehaviour
     public ControllerParameters2D DefaultParamaters;
 
     public ControllerState2D State { get; set; }
+    public Vector2 Velocity { get; set; }
+    public bool CanJump { get { return false; } }
 
     public void Awake()
     {
-
+        State = new ControllerState2D();
     }
 
     public void AdForce(Vector2 force)
