@@ -40,11 +40,11 @@ TagManager:
   - name: Background
     userID: 1
     uniqueID: 2633630041
-    locked: 0
+    locked: 1
   - name: Mountains
     userID: 2
     uniqueID: 2314867273
-    locked: 0
+    locked: 1
   - name: Treeline
     userID: 3
     uniqueID: 3737918845
@@ -52,6 +52,10 @@ TagManager:
   - name: Foreground
     userID: 4
     uniqueID: 3682069187
+    locked: 0
+  - name: Player
+    userID: 5
+    uniqueID: 790099697
     locked: 0
   - name: Default
     userID: 0
