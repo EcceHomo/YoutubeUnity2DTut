@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterControer2D : MonoBehaviour 
+public class CharacterController2D : MonoBehaviour 
 {
     private const float SkinWidth = 0.2f;
     private const int TotalHorizontalRays = 8;
     private const int TotalVerticalRays = 4;
 
-    private static readonly float SloopeLimitTangant = Mathf.Tan(75f * Mathf.Deg2Rad);
+    private static readonly float SlopeLimitTangant = Mathf.Tan(75f * Mathf.Deg2Rad);
 
     public LayerMask PlatformMask;
     public ControllerParameters2D DefaultParamaters;
