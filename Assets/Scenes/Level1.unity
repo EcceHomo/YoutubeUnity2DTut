@@ -154,7 +154,7 @@ Transform:
   - {fileID: 943229230}
   - {fileID: 1492521325}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!61 &60355693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 3b61335eb13721847a2e854ed7607122, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b61335eb13721847a2e854ed7607122, type: 2}
@@ -438,7 +438,7 @@ Transform:
   m_Children:
   - {fileID: 734802904}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!61 &507547822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1436,7 +1436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1335672549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1426030482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da2f354b5418cf43881e35ea813e0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxSpeed: 8
+  SpeedAccelerationOnGround: 10
+  SpeedAccelerationInAir: 5
 --- !u!114 &1426030485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,7 +1920,7 @@ Transform:
   - {fileID: 1997687785}
   - {fileID: 1049454515}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
 --- !u!114 &1571542050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,7 +1967,7 @@ Transform:
   - {fileID: 1466803287}
   - {fileID: 658154778}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!61 &1603228890
 BoxCollider2D:
   m_ObjectHideFlags: 0
