@@ -9,7 +9,7 @@ public class ControllerParameters2D
     {
         CanJumpOnGround,
         CanJumpAnywhere,
-        CantJump,
+        CantJump
     }
 
     public Vector2 MaxVelocity = new Vector2(float.MaxValue, float.MaxValue);
@@ -22,5 +22,7 @@ public class ControllerParameters2D
     public JumpBehavior JumpRestrictions;
 
     public float JumpFrequency = .25f;
+
+    public float JumpMagnitute = 12;
 
 }
