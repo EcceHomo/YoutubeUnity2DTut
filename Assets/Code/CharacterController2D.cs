@@ -243,12 +243,50 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleVerticalSlope(ref Vector2 deltaMovement)
     {
+        var center = (_raycastBottomLeft.x + _raycastBottomRight.x) / 2;
+        var direction = -Vector2.up;
 
+        var slopeDistance = SlopeLimitTangant * (_raycastBottomRight.x - center);
+        var slopeRayVector = new Vector2(center, _raycastBottomLeft.y);
+
+        Debug.DrawRay(slopeRayVector, direction * slopeDistance, Color.yellow);
+        var rayCastHit = Physics2D.Raycast(slopeRayVector, direction, slopeDistance, PlatformMask);
+
+        if (!rayCastHit)
+            return;
+
+        var isMovingDownSlope = Mathf.Sign(rayCastHit.normal.x) == Mathf.Sign(deltaMovement.x);
+        if (!isMovingDownSlope)
+            return;
+
+        var angle = Vector2.Angle(rayCastHit.normal, Vector2.up);
+        if (Mathf.Abs(angle) < .0001f)
+            return;
+
+        State.IsMovingDownSlope = true;
+        State.SlopeAngle = angle;
+        deltaMovement.y = rayCastHit.point.y - slopeRayVector.y;
     }
 
     private bool HandleHorizontalSlope(ref Vector2 deltaMovement, float angle, bool isGoingRight)
     {
-        return false;
+        if (Mathf.RoundToInt(angle) == 90)
+            return false;
+
+        if (angle > Parameters.SlopeLimit)
+        {
+            deltaMovement.x = 0;
+            return true;
+        }
+
+        if (deltaMovement.y > .07f)
+            return true;
+
+        deltaMovement.x += isGoingRight ? -SkinWidth : SkinWidth;
+        deltaMovement.y = Mathf.Abs(Mathf.Tan(angle * Mathf.Deg2Rad) * deltaMovement.x);
+        State.IsMovingUpSlope = true;
+        State.IsCollidingBelow = true;
+        return true;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
