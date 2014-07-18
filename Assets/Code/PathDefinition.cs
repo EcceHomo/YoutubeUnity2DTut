@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PathDefinition : MonoBehaviour 
 {
@@ -33,12 +34,18 @@ public class PathDefinition : MonoBehaviour
 
     public void OnDrawGizmos()
     {
+      
         if (Points == null || Points.Length < 2)  // Pregledavamo imamo li uopće dovoljno točaka za kreirati liniju,
             return;                              // ako imamo dovoljno točaka vraćamo vrijednost
 
-        for (var i = 1; i < Points.Length; i++)     // Za sve točke počinjemo u 1, počinjemo gledati u indeks 2
+        var points = Points.Where(t => t != null).ToList();
+
+        if (points.Count < 2)
+            return;
+
+        for (var i = 1; i < points.Count; i++)     // Za sve točke počinjemo u 1, počinjemo gledati u indeks 2
         {                                          // tako da možemo gledati u prijašnju točku te se referencirati prilikom iscrtavanja na nju [i - 1]
-            Gizmos.DrawLine(Points[i - 1].position, Points[i].position);
+            Gizmos.DrawLine(points[i - 1].position, points[i].position);
         }
     }
 }
