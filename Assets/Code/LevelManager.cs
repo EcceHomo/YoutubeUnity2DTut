@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 class LevelManager : MonoBehaviour
 {
@@ -9,11 +10,25 @@ class LevelManager : MonoBehaviour
 
     public Player Player { get; private set; }
     public CameraController Camera { get; private set; }
+    public TimeSpan RunningTime { get { return DateTime.UtcNow - _started; } }
+
+    public int CurrentTimeBonus
+    {
+        get
+        {
+            var secondDifference = (int)(BonusCutoffSeconds - RunningTime.TotalSeconds);
+            return Mathf.Max(0, secondDifference) * BonusSecondMultiplier;
+        }
+    }
 
     private List<Checkpoint> _checkpoints;
     private int _currentCheckpointIndex;
+    private DateTime _started;
+    private int _savedPoints;
 
     public Checkpoint DebugSpawn;
+    public int BonusCutoffSeconds;
+    public int BonusSecondMultiplier;
 
     public void Awake()
     {
@@ -27,6 +42,8 @@ class LevelManager : MonoBehaviour
 
         Player = FindObjectOfType<Player>();
         Camera = FindObjectOfType<CameraController>();
+
+        _started = DateTime.UtcNow;
 
 #if UNITY_EDITOR
         if (DebugSpawn != null)
@@ -52,7 +69,10 @@ class LevelManager : MonoBehaviour
         _checkpoints[_currentCheckpointIndex].PlayerLeftCheckpoint();
         _currentCheckpointIndex++;
         _checkpoints[_currentCheckpointIndex].PlayerHitCheckpoint();
-        // TODO time bonus
+
+        GameManager.Instance.AddPoints(CurrentTimeBonus);
+        _savedPoints = GameManager.Instance.Points;
+        _started = DateTime.UtcNow;
     }
 
     public void KillPlayer()
@@ -71,7 +91,8 @@ class LevelManager : MonoBehaviour
         if (_currentCheckpointIndex != -1)
             _checkpoints[_currentCheckpointIndex].SpawnPlayer(Player);
 
-        // TODO points
+        _started = DateTime.UtcNow;
+        GameManager.Instance.ResetPoints(_savedPoints);
     }
 
 }
