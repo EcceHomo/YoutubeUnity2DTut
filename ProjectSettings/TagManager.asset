@@ -48,7 +48,7 @@ TagManager:
   - name: Treeline
     userID: 3
     uniqueID: 3737918845
-    locked: 0
+    locked: 1
   - name: Foreground
     userID: 4
     uniqueID: 3682069187
