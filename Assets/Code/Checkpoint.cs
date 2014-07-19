@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-class Checkpoint : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
-    public void Start()
+    private List<IPlayerRespawnListener> _listeners;
+
+    public void Awake()
     {
+        _listeners = new List<IPlayerRespawnListener>();
     }
 
     public void PlayerHitCheckpoint()
@@ -23,9 +27,14 @@ class Checkpoint : MonoBehaviour
     public void SpawnPlayer(Player player)
     {
         player.RespawnAt(transform);
+
+        foreach (var listener in _listeners)
+            listener.OnPlayerRespawnInThisCheckpoint(this, player);
     }
 
-    public void AssignObjectToCheckpoint()
+    public void AssignObjectToCheckpoint(IPlayerRespawnListener listener)
     {
+        Debug.Log("Hello world!");
+        _listeners.Add(listener);
     }
 }
