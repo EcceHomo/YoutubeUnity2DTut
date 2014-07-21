@@ -68,7 +68,7 @@ public class Player : MonoBehaviour, ITakeDamage
         transform.position = spawnPoint.position;
     }
 
-    public void TakeDamage(int damage, GameObject instigator)
+    public void TakeDamage(int damage, GameObject instagator)
     {
 
         FloatingText.Show(string.Format("-{0}", damage), "PlayerTakeDamageText",
@@ -79,6 +79,13 @@ public class Player : MonoBehaviour, ITakeDamage
 
         if (Health <= 0)
             LevelManager.Instance.KillPlayer();
+    }
+
+    public void GiveHealth(int health, GameObject instagator)
+    {
+        FloatingText.Show(string.Format("+{0}", health), "PlayerGotHealthText",
+            new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
+        Health = Mathf.Min(Health + health, MaxHealth);
     }
 
     private void HandleInput()
