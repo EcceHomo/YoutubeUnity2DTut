@@ -76,6 +76,7 @@ MonoBehaviour:
   DestroyedEffect: {fileID: 100000, guid: 37bfa614233a894478988c96eef0c572, type: 2}
   PointsToGiveToPlayer: 10
   TimeToLive: 10
+  DestroySound: {fileID: 8300000, guid: 97f72d4182fe49446998596b72a3322d, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

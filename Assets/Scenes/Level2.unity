@@ -5369,7 +5369,7 @@ GameObject:
   - 61: {fileID: 1447996420}
   - 114: {fileID: 1447996419}
   m_Layer: 0
-  m_Name: Level Finish Line
+  m_Name: Game Finish Line
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5386,7 +5386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43516a610f1a9ca4690b1c23b6d4ea04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Level2
+  LevelName: 
 --- !u!61 &1447996420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5405,7 +5405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1447996418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.2074165, y: 4.11664438, z: 0}
+  m_LocalPosition: {x: 55.1600113, y: 4.62985897, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

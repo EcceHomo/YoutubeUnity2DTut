@@ -156,6 +156,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400006}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -418,6 +419,9 @@ MonoBehaviour:
   FireRate: .5
   ProjectileFireLocation: {fileID: 400022}
   FireProjectileEffect: {fileID: 100000, guid: 64b664ff98545e84da8d266aea255031, type: 2}
+  PlayerHitSound: {fileID: 8300000, guid: b4d250149d3d50e4db733924a0222205, type: 3}
+  PlayerShootSound: {fileID: 8300000, guid: e7d7ec55adfcb49479f9f56e60d93000, type: 3}
+  PlayerHealthSound: {fileID: 8300000, guid: c4bddbfbf7e9c2d4393227287b9049e5, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -430,6 +434,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LayerName: Particles
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7832caa1d3e39b4f9c571a897c52f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bounds: {fileID: 0}
+  Above: 0
+  Below: 2
+  Left: 1
+  Right: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
