@@ -16,6 +16,9 @@ public class Player : MonoBehaviour, ITakeDamage
     public float FireRate;
     public Transform ProjectileFireLocation;
     public GameObject FireProjectileEffect;
+    public AudioClip PlayerHitSound;
+    public AudioClip PlayerShootSound;
+    public AudioClip PlayerHealthSound;
 
     public int Health { get; private set; }
     public bool IsDead { get; private set; }
@@ -70,7 +73,7 @@ public class Player : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(int damage, GameObject instagator)
     {
-
+        AudioSource.PlayClipAtPoint(PlayerHitSound, transform.position);
         FloatingText.Show(string.Format("-{0}", damage), "PlayerTakeDamageText",
             new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
 
@@ -83,6 +86,7 @@ public class Player : MonoBehaviour, ITakeDamage
 
     public void GiveHealth(int health, GameObject instagator)
     {
+        AudioSource.PlayClipAtPoint(PlayerHitSound, transform.position);
         FloatingText.Show(string.Format("+{0}", health), "PlayerGotHealthText",
             new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
         Health = Mathf.Min(Health + health, MaxHealth);
@@ -135,6 +139,8 @@ public class Player : MonoBehaviour, ITakeDamage
         projectile.Initialize(gameObject, direction, _controller.Velocity);
 
         _canFireIn = FireRate;
+
+        AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
     }
 
     public void Flip()
