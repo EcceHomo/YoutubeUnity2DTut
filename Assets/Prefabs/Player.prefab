@@ -157,6 +157,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400006}
+  - 95: {fileID: 9500000}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -229,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.588270187, y: -2.55994797, z: 0}
+  m_LocalPosition: {x: -.588270247, y: -2.55994749, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
@@ -313,7 +314,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.52142525, y: 9.13647842, z: 0}
+  m_LocalPosition: {x: -6.53738022, y: 6.56907177, z: 0}
   m_LocalScale: {x: .511900008, y: .511900008, z: 1}
   m_Children:
   - {fileID: 400016}
@@ -378,6 +379,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 4.98000002, y: 5.42999983}
   m_Center: {x: 0, y: -.209999993}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b8977f5f75bf134b903b54a63c81371, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -422,6 +437,7 @@ MonoBehaviour:
   PlayerHitSound: {fileID: 8300000, guid: b4d250149d3d50e4db733924a0222205, type: 3}
   PlayerShootSound: {fileID: 8300000, guid: e7d7ec55adfcb49479f9f56e60d93000, type: 3}
   PlayerHealthSound: {fileID: 8300000, guid: c4bddbfbf7e9c2d4393227287b9049e5, type: 3}
+  Animator: {fileID: 9500000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

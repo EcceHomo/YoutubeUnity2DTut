@@ -713,6 +713,7 @@ MonoBehaviour:
   FireRate: 2
   SpawnProjectileSound: {fileID: 8300000, guid: 8ea8fdb644623ff4a9418b53ccf2b70e,
     type: 3}
+  Animator: {fileID: 574977880}
 --- !u!4 &198324941
 Transform:
   m_ObjectHideFlags: 0
@@ -752,7 +753,7 @@ Transform:
   m_LocalScale: {x: 1.71141589, y: 1.71141624, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &220493977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -842,6 +843,7 @@ GameObject:
   - 4: {fileID: 247198501}
   - 61: {fileID: 247198500}
   - 114: {fileID: 247198499}
+  - 95: {fileID: 247198502}
   m_Layer: 0
   m_Name: Health Pack
   m_TagString: Untagged
@@ -888,6 +890,21 @@ Transform:
   - {fileID: 1691239405}
   m_Father: {fileID: 0}
   m_RootOrder: 44
+--- !u!95 &247198502
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 563e3355741b00749a0f4d69dbd7c273,
+    type: 2}
+  m_PrefabInternal: {fileID: 1968295416}
+  m_GameObject: {fileID: 247198498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 469b2966a8e64ec40a28fee9e096845a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1001 &249084252
 Prefab:
   m_ObjectHideFlags: 0
@@ -1639,7 +1656,7 @@ Transform:
   m_PrefabInternal: {fileID: 1405530291}
   m_GameObject: {fileID: 519866403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.588270187, y: -2.55994797, z: 0}
+  m_LocalPosition: {x: -.588270247, y: -2.55994749, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1426030483}
@@ -1677,6 +1694,7 @@ GameObject:
   - 4: {fileID: 520844281}
   - 61: {fileID: 520844283}
   - 114: {fileID: 520844282}
+  - 95: {fileID: 520844284}
   m_Layer: 0
   m_Name: Health Pack
   m_TagString: Untagged
@@ -1723,6 +1741,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1.24000001, y: 1.24000001}
   m_Center: {x: 0, y: 0}
+--- !u!95 &520844284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 563e3355741b00749a0f4d69dbd7c273,
+    type: 2}
+  m_PrefabInternal: {fileID: 754828388}
+  m_GameObject: {fileID: 520844280}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 469b2966a8e64ec40a28fee9e096845a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1001 &522556526
 Prefab:
   m_ObjectHideFlags: 0
@@ -1844,6 +1877,7 @@ GameObject:
   - 4: {fileID: 567299696}
   - 58: {fileID: 567299695}
   - 114: {fileID: 567299694}
+  - 95: {fileID: 567299697}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -1866,6 +1900,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 567299697}
+  Renderer: {fileID: 1854007720}
 --- !u!58 &567299695
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1891,6 +1927,21 @@ Transform:
   - {fileID: 1854007719}
   m_Father: {fileID: 0}
   m_RootOrder: 25
+--- !u!95 &567299697
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 249084252}
+  m_GameObject: {fileID: 567299693}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &574977876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,8 +1950,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 574977877}
-  - 212: {fileID: 574977878}
   - 61: {fileID: 574977879}
+  - 95: {fileID: 574977880}
   m_Layer: 8
   m_Name: Cannon
   m_TagString: Untagged
@@ -1919,6 +1970,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 198324941}
+  - {fileID: 619067547}
   - {fileID: 1644097201}
   m_Father: {fileID: 0}
   m_RootOrder: 35
@@ -1928,7 +1980,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 21200000, guid: 4a61fa13294a51b48842576b8446982b,
     type: 2}
   m_PrefabInternal: {fileID: 620727730}
-  m_GameObject: {fileID: 574977876}
+  m_GameObject: {fileID: 619067546}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -1957,6 +2009,21 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 3.0999999, y: 2.22000003}
   m_Center: {x: 1.54999995, y: 1.14499998}
+--- !u!95 &574977880
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 4a61fa13294a51b48842576b8446982b,
+    type: 2}
+  m_PrefabInternal: {fileID: 620727730}
+  m_GameObject: {fileID: 574977876}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f086e3f9ebd3704c980d859c6d490ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &575616485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,6 +2034,7 @@ GameObject:
   - 4: {fileID: 575616486}
   - 58: {fileID: 575616488}
   - 114: {fileID: 575616487}
+  - 95: {fileID: 575616489}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -2002,6 +2070,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 575616489}
+  Renderer: {fileID: 2118408848}
 --- !u!58 &575616488
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2014,6 +2084,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &575616489
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1670649159}
+  m_GameObject: {fileID: 575616485}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1001 &607176545
 Prefab:
   m_ObjectHideFlags: 0
@@ -2121,6 +2206,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 50216761}
   m_RootOrder: 0
+--- !u!1 &619067546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 4a61fa13294a51b48842576b8446982b, type: 2}
+  m_PrefabInternal: {fileID: 620727730}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 619067547}
+  - 212: {fileID: 574977878}
+  m_Layer: 0
+  m_Name: Cannon Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619067547
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 4a61fa13294a51b48842576b8446982b, type: 2}
+  m_PrefabInternal: {fileID: 620727730}
+  m_GameObject: {fileID: 619067546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 574977877}
+  m_RootOrder: 1
 --- !u!1001 &620727730
 Prefab:
   m_ObjectHideFlags: 0
@@ -2246,11 +2359,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 745075469}
   - {fileID: 1423997488}
   - {fileID: 1971004059}
   - {fileID: 1628852400}
   - {fileID: 220493976}
-  - {fileID: 745075469}
   m_Father: {fileID: 478076644}
   m_RootOrder: 3
 --- !u!1 &648012344
@@ -2823,7 +2936,7 @@ Transform:
   m_LocalScale: {x: 1.64797211, y: 1.64797235, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!212 &745075470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3232,6 +3345,7 @@ GameObject:
   - 4: {fileID: 872014473}
   - 58: {fileID: 872014475}
   - 114: {fileID: 872014474}
+  - 95: {fileID: 872014476}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -3267,6 +3381,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 872014476}
+  Renderer: {fileID: 53012378}
 --- !u!58 &872014475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3279,6 +3395,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &872014476
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 950764668}
+  m_GameObject: {fileID: 872014472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &924898129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3518,7 @@ GameObject:
   - 4: {fileID: 926342589}
   - 58: {fileID: 926342591}
   - 114: {fileID: 926342590}
+  - 95: {fileID: 926342592}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -3422,6 +3554,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 926342592}
+  Renderer: {fileID: 1845958098}
 --- !u!58 &926342591
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3434,6 +3568,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &926342592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 384889604}
+  m_GameObject: {fileID: 926342588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &943229228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4139,7 @@ GameObject:
   - 4: {fileID: 1099264990}
   - 58: {fileID: 1099264992}
   - 114: {fileID: 1099264991}
+  - 95: {fileID: 1099264993}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -4025,6 +4175,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 1099264993}
+  Renderer: {fileID: 1836338525}
 --- !u!58 &1099264992
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4037,6 +4189,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &1099264993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 689828425}
+  m_GameObject: {fileID: 1099264989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &1162745278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,7 +5117,7 @@ Transform:
   m_LocalScale: {x: 2.08592987, y: 2.08592629, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!212 &1423997489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4987,6 +5154,7 @@ GameObject:
   - 50: {fileID: 1426030487}
   - 61: {fileID: 1426030486}
   - 114: {fileID: 1426030488}
+  - 95: {fileID: 1426030489}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -5040,6 +5208,7 @@ MonoBehaviour:
   PlayerHitSound: {fileID: 8300000, guid: b4d250149d3d50e4db733924a0222205, type: 3}
   PlayerShootSound: {fileID: 8300000, guid: e7d7ec55adfcb49479f9f56e60d93000, type: 3}
   PlayerHealthSound: {fileID: 8300000, guid: c4bddbfbf7e9c2d4393227287b9049e5, type: 3}
+  Animator: {fileID: 1426030489}
 --- !u!114 &1426030485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5107,6 +5276,21 @@ MonoBehaviour:
   Below: 2
   Left: 1
   Right: 1
+--- !u!95 &1426030489
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 3b61335eb13721847a2e854ed7607122,
+    type: 2}
+  m_PrefabInternal: {fileID: 1405530291}
+  m_GameObject: {fileID: 1426030482}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b8977f5f75bf134b903b54a63c81371, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &1437965580
 GameObject:
   m_ObjectHideFlags: 0
@@ -6183,7 +6367,7 @@ Transform:
   m_LocalScale: {x: 1.45609462, y: 1.45609355, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &1628852401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6233,7 +6417,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 574977877}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1644555942
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,6 +6428,7 @@ GameObject:
   - 4: {fileID: 1644555945}
   - 58: {fileID: 1644555944}
   - 114: {fileID: 1644555943}
+  - 95: {fileID: 1644555946}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -6266,6 +6451,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 1644555946}
+  Renderer: {fileID: 1493723633}
 --- !u!58 &1644555944
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6291,6 +6478,21 @@ Transform:
   - {fileID: 1493723632}
   m_Father: {fileID: 0}
   m_RootOrder: 29
+--- !u!95 &1644555946
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1500001623}
+  m_GameObject: {fileID: 1644555942}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1001 &1662133151
 Prefab:
   m_ObjectHideFlags: 0
@@ -8272,6 +8474,7 @@ GameObject:
   - 4: {fileID: 1875959303}
   - 58: {fileID: 1875959305}
   - 114: {fileID: 1875959304}
+  - 95: {fileID: 1875959306}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -8307,6 +8510,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 1875959306}
+  Renderer: {fileID: 1557689455}
 --- !u!58 &1875959305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8319,6 +8524,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &1875959306
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 2080685456}
+  m_GameObject: {fileID: 1875959302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &1877563857
 GameObject:
   m_ObjectHideFlags: 0
@@ -8380,6 +8600,7 @@ GameObject:
   - 4: {fileID: 1882505067}
   - 58: {fileID: 1882505069}
   - 114: {fileID: 1882505068}
+  - 95: {fileID: 1882505070}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -8415,6 +8636,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 1882505070}
+  Renderer: {fileID: 974417650}
 --- !u!58 &1882505069
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8427,6 +8650,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .560000002
   m_Center: {x: 0, y: -.0900000036}
+--- !u!95 &1882505070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1692331729}
+  m_GameObject: {fileID: 1882505066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &1893968827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8840,7 +9078,7 @@ Transform:
   m_LocalScale: {x: 1.70300603, y: 1.703004, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &1971004060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9317,6 +9555,7 @@ GameObject:
   - 4: {fileID: 2109523156}
   - 58: {fileID: 2109523155}
   - 114: {fileID: 2109523154}
+  - 95: {fileID: 2109523157}
   m_Layer: 0
   m_Name: Point Star
   m_TagString: Untagged
@@ -9339,6 +9578,8 @@ MonoBehaviour:
   Effect: {fileID: 100000, guid: 7c40e83f50e6409458ffcaf103ca2625, type: 2}
   PointsToAdd: 10
   HitStarSound: {fileID: 8300000, guid: eefa0868a6fbe804ca59a737539341b6, type: 3}
+  Animator: {fileID: 2109523157}
+  Renderer: {fileID: 1995802225}
 --- !u!58 &2109523155
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9364,6 +9605,21 @@ Transform:
   - {fileID: 1995802224}
   m_Father: {fileID: 0}
   m_RootOrder: 30
+--- !u!95 &2109523157
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: f5defc696d33aff4eb0c10ec8db276ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 141428099}
+  m_GameObject: {fileID: 2109523153}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b0fd15ea2f3a094a8a21f3b3203940e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
 --- !u!1 &2109915055
 GameObject:
   m_ObjectHideFlags: 0
