@@ -39,7 +39,7 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
 
     public void OnPlayerRespawnInThisCheckpoint(Checkpoint checkpoint, Player player)
     {
-        gameObject.SetActive(true);
+        _isCollected = false;
         Renderer.enabled = true;
     }
 }
