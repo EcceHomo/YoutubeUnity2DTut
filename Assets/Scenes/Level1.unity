@@ -962,7 +962,7 @@ Transform:
   m_LocalScale: {x: 1.71141589, y: 1.71141624, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!212 &220493977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2789,11 +2789,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1423997488}
-  - {fileID: 1971004059}
   - {fileID: 1628852400}
   - {fileID: 220493976}
   - {fileID: 745075469}
+  - {fileID: 1423997488}
+  - {fileID: 1971004059}
   m_Father: {fileID: 478076644}
   m_RootOrder: 3
 --- !u!1 &648012344
@@ -3485,7 +3485,7 @@ Transform:
   m_LocalScale: {x: 1.64797211, y: 1.64797235, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!212 &745075470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6080,7 +6080,7 @@ Transform:
   m_LocalScale: {x: 2.08592987, y: 2.08592629, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!212 &1423997489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6132,7 +6132,7 @@ Transform:
   m_PrefabInternal: {fileID: 1699874536}
   m_GameObject: {fileID: 1426030482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.58462143, y: 9.16701889, z: 0}
+  m_LocalPosition: {x: -8.13972664, y: 13.4489336, z: 0}
   m_LocalScale: {x: .511900008, y: .511900008, z: 1}
   m_Children:
   - {fileID: 675868899}
@@ -7492,7 +7492,7 @@ Transform:
   m_LocalScale: {x: 1.45609462, y: 1.45609355, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!212 &1628852401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8006,11 +8006,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400018, guid: 3b61335eb13721847a2e854ed7607122, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.58462143
+      value: -8.13972664
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 3b61335eb13721847a2e854ed7607122, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.16701889
+      value: 13.4489336
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 3b61335eb13721847a2e854ed7607122, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10431,7 +10431,7 @@ Transform:
   m_LocalScale: {x: 1.70300603, y: 1.703004, z: 1}
   m_Children: []
   m_Father: {fileID: 630519324}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!212 &1971004060
 SpriteRenderer:
   m_ObjectHideFlags: 0
