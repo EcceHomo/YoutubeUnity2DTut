@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Pozdrav iz r2_testiranje
+
 public class Player : MonoBehaviour, ITakeDamage
 {
     private bool _isFacingRight;
