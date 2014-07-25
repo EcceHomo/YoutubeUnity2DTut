@@ -2,6 +2,7 @@
 using System.Collections;
 
 // Pozdrav iz r2_testiranje
+// Pozdrav iz r3_merge
 
 public class Player : MonoBehaviour, ITakeDamage
 {
