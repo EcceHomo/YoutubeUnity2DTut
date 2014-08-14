@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, ITakeDamage
     private bool _isFacingRight;
     private CharacterController2D _controller;
     private float _normalizedHorizontalSpeed;
+    private bool _doubleJump = false;
 
     public float MaxSpeed = 8;
     public float SpeedAccelerationOnGround = 10f;
@@ -38,6 +39,9 @@ public class Player : MonoBehaviour, ITakeDamage
 
     public void Update()
     {
+        if (_controller.State.IsGrounded)
+            _doubleJump = false;
+
         _canFireIn -= Time.deltaTime;
 
         if (!IsDead)
@@ -127,9 +131,11 @@ public class Player : MonoBehaviour, ITakeDamage
             _normalizedHorizontalSpeed = 0;
         }
 
-        if (_controller.CanJump && Input.GetKeyDown(KeyCode.Space))
+        if ((_controller.CanJump || !_doubleJump) && Input.GetKeyDown(KeyCode.Space))
         {
             _controller.Jump();
+            if (!_doubleJump && !_controller.State.IsGrounded)
+                _doubleJump = true;
         }
 
         if (Input.GetMouseButtonDown(0))
