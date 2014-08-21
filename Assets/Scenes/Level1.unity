@@ -6055,11 +6055,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400026, guid: 22a94f394eded914187a2222db882632, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.1827946
+      value: -16.9670792
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 22a94f394eded914187a2222db882632, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.6163177
+      value: 17.5879536
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: 22a94f394eded914187a2222db882632, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12602,6 +12602,8 @@ GameObject:
   - 4: {fileID: 2105386529}
   - 212: {fileID: 2105386531}
   - 95: {fileID: 2105386530}
+  - 50: {fileID: 2105386533}
+  - 61: {fileID: 2105386532}
   m_Layer: 0
   m_Name: Prision Guard
   m_TagString: Untagged
@@ -12616,7 +12618,7 @@ Transform:
   m_PrefabInternal: {fileID: 1195047289}
   m_GameObject: {fileID: 2105386528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.1827946, y: 17.6163177, z: 0}
+  m_LocalPosition: {x: -16.9670792, y: 17.5879536, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 626717577}
@@ -12671,6 +12673,32 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &2105386532
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105386528}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1.91999996, y: 7.38000011}
+  m_Center: {x: 0, y: -3.32999992}
+--- !u!50 &2105386533
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105386528}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &2109523153
 GameObject:
   m_ObjectHideFlags: 0

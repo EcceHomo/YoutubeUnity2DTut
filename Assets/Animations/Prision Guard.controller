@@ -35,6 +35,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110203968
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Prison Guard Fire
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 15e76ee6d3cbf4a4f8749bfbcb7a17c9, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 154, y: 250, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110209545
 State:
   m_ObjectHideFlags: 3
@@ -46,7 +61,37 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 25e62f1060e53a54c94f5c2325f2c8bf, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 85, y: 115, z: 0}
+  m_Position: {x: 84, y: 120, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110228681
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Prison Guard Death
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 4f2d45196a8b93e469f77ed074be034c, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 189, y: 315, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110244988
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Prison Guard Walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 95cd907d11aca6f41a163dcc5fd547ad, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 119, y: 185, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -61,6 +106,9 @@ StateMachine:
   m_States:
   - {fileID: 110200000}
   - {fileID: 110209545}
+  - {fileID: 110244988}
+  - {fileID: 110203968}
+  - {fileID: 110228681}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
