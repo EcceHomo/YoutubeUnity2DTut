@@ -7,6 +7,7 @@ class GameManager
 
     public int Points { get; private set; }
 
+
     private GameManager()
     {
     }
@@ -24,6 +25,11 @@ class GameManager
     public void AddPoints(int pointsToAdd)
     {
         Points += pointsToAdd;
+    }
+
+    public void TakePoints(int pointsToTake)
+    {
+        Points -= pointsToTake;
     }
 }
 

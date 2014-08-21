@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 1a36676f037e9544086b9db2b3804e2a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Prison Guard
+    21300002: Prison Guard_0
+    21300004: Zdjelica
+    21300006: Glava
+    21300008: Torzo
+    21300010: Podlaktica Z
+    21300012: Natkoljenica P
+    21300014: Natkoljenica Z
+    21300016: Nadlaktica P
+    21300018: Potkoljenica Z
+    21300020: Stopalo Z
+    21300022: Potkoljenica P
+    21300024: Nadlaktica Z
+    21300026: Stopalo P
+    21300028: Podlaktica P
+    21300030: Prison Guard_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Zdjelica
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 954
+        width: 117
+        height: 140
+      alignment: 9
+      pivot: {x: .46950981, y: .418460518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Glava
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 956
+        width: 94
+        height: 124
+      alignment: 9
+      pivot: {x: .310247213, y: .17203398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Torzo
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 852
+        width: 139
+        height: 266
+      alignment: 9
+      pivot: {x: .630166888, y: .115688927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podlaktica Z
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 828
+        width: 126
+        height: 228
+      alignment: 9
+      pivot: {x: .728738427, y: .869900882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Natkoljenica P
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 625
+        width: 110
+        height: 224
+      alignment: 9
+      pivot: {x: .372656941, y: .849390328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Natkoljenica Z
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 618
+        width: 110
+        height: 229
+      alignment: 9
+      pivot: {x: .394850016, y: .837777376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadlaktica P
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 583
+        width: 133
+        height: 140
+      alignment: 9
+      pivot: {x: .740793765, y: .748048604}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Potkoljenica Z
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 347
+        width: 101
+        height: 222
+      alignment: 9
+      pivot: {x: .610691786, y: .839928687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stopalo Z
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 556
+        width: 137
+        height: 73
+      alignment: 9
+      pivot: {x: .235526204, y: .712661505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Potkoljenica P
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 317
+        width: 99
+        height: 220
+      alignment: 9
+      pivot: {x: .59636879, y: .814973593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadlaktica Z
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 337
+        width: 167
+        height: 138
+      alignment: 9
+      pivot: {x: .60661304, y: .746769547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stopalo P
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 143
+        width: 135
+        height: 76
+      alignment: 9
+      pivot: {x: .25172171, y: .719657719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podlaktica P
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 41
+        width: 128
+        height: 233
+      alignment: 9
+      pivot: {x: .693286896, y: .873472393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prison Guard_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 282
+        width: 7
+        height: 171
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

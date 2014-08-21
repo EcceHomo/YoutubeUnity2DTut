@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public GUISkin skin;
     public List<Item> inventory = new List<Item>();
     public List<Item> Slots = new List<Item>();
+    public int PointsToTake = 10;
 
     private ItemDatabase _database;
     private bool _showInventroy;
@@ -37,9 +38,14 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Inventory"))
+        if (Shop.ShopActive)
         {
-            _showInventroy = !_showInventroy;
+            _showInventroy = Shop.ShopActive;
+        }
+        else
+        {
+            _showInventroy = false;
+            _showTooltip = false;
         }
     }
 
@@ -141,7 +147,7 @@ public class Inventory : MonoBehaviour
 
     string CreateTooltip(Item item)
     {
-        _tooltip = "<color=#4DA4BF>" + item.ItemName + "</color>\n\n" + "<color=#f2f2f2>" + item.ItemDesc + "</color>";
+        _tooltip = "<color=#386D9A>" + item.ItemName + "</color>\n\n" + "<color=#FFFF00>" + item.ItemDesc + "</color>";
         return _tooltip;
     }
 
@@ -165,6 +171,7 @@ public class Inventory : MonoBehaviour
             case 2:
             {
                 //PlayerStats.IncreaseStat(statid, butfamount, buffduration);
+                GameManager.Instance.TakePoints(PointsToTake);  // uzmi 10 bodova na consumable
                 print("Used consumeable: "+item.ItemName);
                 break;
             }

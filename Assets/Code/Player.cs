@@ -23,6 +23,7 @@ public class Player : MonoBehaviour, ITakeDamage
     public AudioClip PlayerShootSound;
     public AudioClip PlayerHealthSound;
     public Animator Animator;
+    public static bool IsFiring = true;
 
     public int Health { get; private set; }
     public bool IsDead { get; private set; }
@@ -144,24 +145,32 @@ public class Player : MonoBehaviour, ITakeDamage
 
     private void FireProjectile()
     {
-        if(_canFireIn > 0)
+        if(_canFireIn > 0 || IsFiring == false)
             return;
 
-        if (FireProjectileEffect != null)
+        if (IsFiring)
         {
-            var effect = (GameObject) Instantiate(FireProjectileEffect, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
-            effect.transform.parent = transform;
+            if (FireProjectileEffect != null)
+            {
+                var effect =
+                    (GameObject)
+                        Instantiate(FireProjectileEffect, ProjectileFireLocation.position,
+                            ProjectileFireLocation.rotation);
+                effect.transform.parent = transform;
+            }
+            var direction = _isFacingRight ? Vector2.right : -Vector2.right;
+
+            var projectile =
+                (Projectile) Instantiate(Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
+            projectile.Initialize(gameObject, direction, _controller.Velocity);
+
+            print("Fire"); // pregled svakog projektila
+
+            _canFireIn = FireRate;
+
+            AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
+            Animator.SetTrigger("Fire");
         }
-        var direction = _isFacingRight ? Vector2.right : -Vector2.right;
-
-        var projectile =
-            (Projectile) Instantiate(Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
-        projectile.Initialize(gameObject, direction, _controller.Velocity);
-
-        _canFireIn = FireRate;
-
-        AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
-        Animator.SetTrigger("Fire");
     }
 
     public void Flip()

@@ -369,27 +369,27 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110268932}
+      first: {fileID: 0}
       second:
-      - {fileID: 110103834}
-      - {fileID: 110136374}
-    data:
-      first: {fileID: 110267153}
-      second:
-      - {fileID: 110153641}
-    data:
-      first: {fileID: 110232120}
-      second:
-      - {fileID: 110160175}
+      - {fileID: 110130015}
     data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
       - {fileID: 110166538}
     data:
-      first: {fileID: 0}
+      first: {fileID: 110232120}
       second:
-      - {fileID: 110130015}
+      - {fileID: 110160175}
+    data:
+      first: {fileID: 110267153}
+      second:
+      - {fileID: 110153641}
+    data:
+      first: {fileID: 110268932}
+      second:
+      - {fileID: 110103834}
+      - {fileID: 110136374}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 0, y: -12, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -408,13 +408,13 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110223391}
-      second:
-      - {fileID: 110107131}
-    data:
       first: {fileID: 110292447}
       second:
       - {fileID: 110115289}
+    data:
+      first: {fileID: 110223391}
+      second:
+      - {fileID: 110107131}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 72, y: -108, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
