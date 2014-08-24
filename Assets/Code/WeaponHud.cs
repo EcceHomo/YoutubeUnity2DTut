@@ -4,20 +4,21 @@ using System.Collections;
 public class WeaponHud : MonoBehaviour {
 
     public GUISkin Skin;
-    public int TotalAmmo = 20;
+    public static int TotalAmmo = 20;
     public int AmmoToTake = 1;
 
     private bool _showWaeponHud;
     private bool _showTooltip;
     private string _tooltip;
     private WeaponDatabase _weaponDatabase;
-    private Item _singleItem;
+
+    public static Item SingleItem;
 
     // Use this for initialization
     void Start()
     {
         _weaponDatabase = GameObject.FindGameObjectWithTag("Weapon Database").GetComponent<WeaponDatabase>();
-        _singleItem = _weaponDatabase.Items[0];
+        SingleItem = _weaponDatabase.Items[0];
         _showWaeponHud = !_showWaeponHud;
     }
 
@@ -31,14 +32,14 @@ public class WeaponHud : MonoBehaviour {
             {
                 Player.IsFiring = true;
                 _showTooltip = false;
-                _singleItem = _weaponDatabase.Items[0];
+                SingleItem = _weaponDatabase.Items[0];
                 print("Mouse ScrollWheel Up, Gun");
             }
 
             else if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
                 _showTooltip = false;
-                _singleItem = _weaponDatabase.Items[1];
+                SingleItem = _weaponDatabase.Items[1];
                 print("Mouse ScrollWheel Down, Gloves");
             }
         }
@@ -48,16 +49,15 @@ public class WeaponHud : MonoBehaviour {
             _showTooltip = false;
         }
 
-        if (Input.GetMouseButtonDown(0) && _singleItem == _weaponDatabase.Items[1])
-        {
-            TotalAmmo -= AmmoToTake;
-        }
-
-        if (TotalAmmo <= 0 && _singleItem == _weaponDatabase.Items[1])
+        if (TotalAmmo <= 0 && SingleItem == _weaponDatabase.Items[1])
         {
             TotalAmmo = 0;
             Player.IsFiring = false;
-            //print("Nema pucanja");
+            // print("Nema pucanja");
+        }
+        else
+        {
+            Player.IsFiring = true;
         }
     }
 
@@ -66,7 +66,7 @@ public class WeaponHud : MonoBehaviour {
         _tooltip = "";
         if (_showWaeponHud)
         {
-            DrawWeponGui(_singleItem.ItemID);
+            DrawWeponGui(SingleItem.ItemID);
         }
 
         if (_showTooltip)
@@ -77,16 +77,16 @@ public class WeaponHud : MonoBehaviour {
 
     void DrawWeponGui(int id)
     {
-        Rect weponRect = new Rect(100, 100, 50, 50);
+        Rect weponRect = new Rect(150, 10, 50, 50);
         GUI.Box(weponRect, "", Skin.GetStyle("Weapon"));
-        if (_singleItem == _weaponDatabase.Items[1])
+        if (SingleItem == _weaponDatabase.Items[1])
         {
             //GameManager.Instance.TakeAmmo(AmmoToTake);
             //print("AmmoToTake: " + AmmoToTake + " TotalAmmo: " + TotalAmmo);
-            GUI.Label(new Rect(104, 130, 50, 50), TotalAmmo.ToString()); // Ammo count
+            GUI.Label(new Rect(154, 40, 50, 50), TotalAmmo.ToString()); // Ammo count
         }
 
-        GUI.DrawTexture(weponRect, _singleItem.ItemIcone);
+        GUI.DrawTexture(weponRect, SingleItem.ItemIcone);
 
         if (weponRect.Contains(Event.current.mousePosition))
         {

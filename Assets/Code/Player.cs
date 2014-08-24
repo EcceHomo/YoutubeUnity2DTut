@@ -170,6 +170,9 @@ public class Player : MonoBehaviour, ITakeDamage
 
             AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
             Animator.SetTrigger("Fire");
+
+            if(WeaponHud.SingleItem.ItemID != 0) // referenciraj gui izbor oružja
+            WeaponHud.TotalAmmo--;              // oduzmi tom oružju ammo
         }
     }
 

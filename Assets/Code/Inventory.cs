@@ -51,10 +51,10 @@ public class Inventory : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
-            SaveInventory();
-        if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
-            LoadInventory();
+        //if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
+            //SaveInventory();
+        //if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
+            //LoadInventory();
 
         _tooltip = "";
         GUI.skin = skin;
