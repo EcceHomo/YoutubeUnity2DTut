@@ -141,6 +141,19 @@ public class Player : MonoBehaviour, ITakeDamage
 
         if (Input.GetMouseButtonDown(0))
             FireProjectile();
+
+        // Onemogućeni inputi kretanja prilikom IsCrouching
+        if (Input.GetKey(KeyCode.S) && _controller.State.IsGrounded)
+        {
+            Animator.SetBool("IsCrouching", true);
+            _controller.SetHorizontalForce(0);
+            _controller.SetVerticalForce(0);
+            _normalizedHorizontalSpeed = 0;
+        }
+        else
+        {
+            Animator.SetBool("IsCrouching", false);
+        }
     }
 
     private void FireProjectile()
