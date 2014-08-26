@@ -38,9 +38,16 @@ public class WeaponHud : MonoBehaviour {
 
             else if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                _showTooltip = false;
-                SingleItem = _weaponDatabase.Items[1];
-                print("Mouse ScrollWheel Down, Gloves");
+                if (_weaponDatabase.Items.Count <= 1)
+                {
+                    print("Drugo oružje još nije implemenitrano");
+                }
+                else
+                {
+                    _showTooltip = false;
+                    SingleItem = _weaponDatabase.Items[1];
+                    print("Mouse ScrollWheel Down, Gloves");
+                }
             }
         }
         else if (Shop.ShopActive)
@@ -79,7 +86,7 @@ public class WeaponHud : MonoBehaviour {
     {
         Rect weponRect = new Rect(150, 10, 50, 50);
         GUI.Box(weponRect, "", Skin.GetStyle("Weapon"));
-        if (SingleItem == _weaponDatabase.Items[1])
+        if (SingleItem != _weaponDatabase.Items[0])
         {
             //GameManager.Instance.TakeAmmo(AmmoToTake);
             //print("AmmoToTake: " + AmmoToTake + " TotalAmmo: " + TotalAmmo);

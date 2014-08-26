@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
     private bool _draggingItem;
     private Item _draggedItem;
     private int _prevIndex;
+    private WeaponDatabase _weaponDatabase;
 
 
     void Start()
@@ -31,8 +32,10 @@ public class Inventory : MonoBehaviour
         AddItem(0);
         AddItem(1);
         AddItem(2);
+        AddItem(3);
         //RemoveItem(0);
         //print(InventoryContatins(1));
+        _weaponDatabase = GameObject.FindGameObjectWithTag("Weapon Database").GetComponent<WeaponDatabase>();
     }
 
 
@@ -51,10 +54,10 @@ public class Inventory : MonoBehaviour
 
     void OnGUI()
     {
-        //if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
-            //SaveInventory();
-        //if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
-            //LoadInventory();
+        if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
+            SaveInventory();
+        if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
+            LoadInventory();
 
         _tooltip = "";
         GUI.skin = skin;
@@ -168,11 +171,12 @@ public class Inventory : MonoBehaviour
     {
         switch (item.ItemID)
         {
-            case 2:
+            case 3:
             {
                 //PlayerStats.IncreaseStat(statid, butfamount, buffduration);
                 GameManager.Instance.TakePoints(PointsToTake);  // uzmi 10 bodova na consumable
                 print("Used consumeable: "+item.ItemName);
+                _weaponDatabase.Items.Add(item);
                 break;
             }
         }

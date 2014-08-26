@@ -7,8 +7,8 @@ public class WeaponDatabase : MonoBehaviour {
 
     void Start()
     {
-        Items.Add(new Item("Gun", 0, "Simple to use 9mm gun", 5, 2, Item.ItemType.Weapon));
-        Items.Add(new Item("Gloves", 1, "Gloves made for traning", 3, 4, Item.ItemType.Weapon));
+
+        Items.Add(new Item("Gloves", 0, "Gloves made for traning", 3, 4, Item.ItemType.Weapon));
     }
 
 }
