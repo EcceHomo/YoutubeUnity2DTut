@@ -95,7 +95,13 @@ public class WeaponHud : MonoBehaviour {
 
         GUI.DrawTexture(weponRect, SingleItem.ItemIcone);
 
-        if (weponRect.Contains(Event.current.mousePosition))
+        if (weponRect.Contains(Event.current.mousePosition) && SingleItem != _weaponDatabase.Items[0])
+        {
+            _tooltip = CreateTooltip(_weaponDatabase.Items[1]);
+            _showTooltip = true;
+        }
+
+        else if (weponRect.Contains(Event.current.mousePosition))
         {
             _tooltip = CreateTooltip(_weaponDatabase.Items[id]);
             _showTooltip = true;
