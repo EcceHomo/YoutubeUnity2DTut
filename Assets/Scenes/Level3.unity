@@ -8419,7 +8419,6 @@ MonoBehaviour:
   Margin: {x: 1, y: .5}
   Smoothing: {x: 2, y: 2}
   Bounds: {fileID: 1734567758}
-  ShopBounds: {fileID: 1968064056}
 --- !u!114 &1616537478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10456,45 +10455,6 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300016, guid: 1a36676f037e9544086b9db2b3804e2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1968064055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1968064057}
-  - 61: {fileID: 1968064056}
-  m_Layer: 9
-  m_Name: Shop Bounds
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1968064056
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968064055}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 1.40236926, y: 1.46621621}
-  m_Center: {x: .200000003, y: .170000002}
---- !u!4 &1968064057
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968064055}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.74156284, y: 7.20553303, z: -21.5114746}
-  m_LocalScale: {x: 7.04351664, y: 7.10513973, z: 43.6173553}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 59
 --- !u!1001 &1968295416
 Prefab:
   m_ObjectHideFlags: 0

@@ -10,13 +10,10 @@ public class CameraController : MonoBehaviour
         Smoothing;
 
     public BoxCollider2D Bounds;
-    public BoxCollider2D ShopBounds;
 
     private Vector3
         _min,
-        _max,
-        _shopMin,
-        _shopMax;
+        _max;
 
     public bool IsFollowing { get; set; }
 
@@ -24,8 +21,6 @@ public class CameraController : MonoBehaviour
     {
         _min = Bounds.bounds.min;
         _max = Bounds.bounds.max;
-        _shopMin = ShopBounds.bounds.min;
-        _shopMax = ShopBounds.bounds.max;
         IsFollowing = true;
     }
 
@@ -44,30 +39,29 @@ public class CameraController : MonoBehaviour
 
         }
 
-        // Veličina kamere kada je Shop uključen
-
-
         var cameraHalfWidth = camera.orthographicSize * ((float)Screen.width / Screen.height);
 
+        x = Mathf.Clamp(x, _min.x + cameraHalfWidth, _max.x - cameraHalfWidth);
+        y = Mathf.Clamp(y, _min.y + camera.orthographicSize, _max.y - camera.orthographicSize);
 
-        //transform.position = new Vector3(x, y, transform.position.z);
+        transform.position = new Vector3(x, y, transform.position.z);
 
         if (!Shop.ShopActive)
         {
-            x = Mathf.Clamp(x, _min.x + cameraHalfWidth, _max.x - cameraHalfWidth);
-            y = Mathf.Clamp(y, _min.y + camera.orthographicSize, _max.y - camera.orthographicSize);
-
-            transform.position = new Vector3(x, y, transform.position.z);
-            Camera.main.orthographicSize = 9.52f;
+            camera.orthographicSize = camera.orthographicSize + 1 * Time.deltaTime;
+            if (Camera.main.orthographicSize > 9.52f)
+            {
+                Camera.main.orthographicSize = 9.52f;
+            }
         }
 
         else if (Shop.ShopActive)
         {
-            x = Mathf.Clamp(x, _shopMin.x + cameraHalfWidth, _shopMax.x - cameraHalfWidth);
-            y = Mathf.Clamp(y, _shopMin.y + camera.orthographicSize, _shopMax.y - camera.orthographicSize);
-
-            transform.position = new Vector3(x, y, transform.position.z);
-            Camera.main.orthographicSize = 6.52f;
+            camera.orthographicSize = camera.orthographicSize - 1 * Time.deltaTime;
+            if (Camera.main.orthographicSize < 6.52f)
+            {
+                Camera.main.orthographicSize = 6.52f;
+            }
         }
 
     }
