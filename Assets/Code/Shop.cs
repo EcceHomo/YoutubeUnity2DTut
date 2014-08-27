@@ -16,7 +16,7 @@ public class Shop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var raycast = Physics2D.Raycast(transform.position, _direction, 2, 1 << LayerMask.NameToLayer("Player"));
+        var raycast = Physics2D.Raycast(transform.position, _direction, 0.01f, 1 << LayerMask.NameToLayer("Player"));
 	    if (!raycast)
 	    {
 	        ShopActive = false;
@@ -29,6 +29,6 @@ public class Shop : MonoBehaviour {
 	        ShopActive = true;
 	    }
 
-	    Debug.DrawRay(transform.position, new Vector3(0, -2f, 0), Color.green);
+	    Debug.DrawRay(transform.position, new Vector3(0, 0.01f, 0), Color.green);
 	}
 }

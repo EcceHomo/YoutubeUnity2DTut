@@ -81,8 +81,11 @@ public class Inventory : MonoBehaviour
     {
         Event e = Event.current;
         int i = 0;
-        for (int y = 0; y < SlotsY; y++)
+        for (int y = 1; y <= SlotsY; y++)
         {
+            // Počinjalo je od o te je bilo samo manje < od slotsx
+            // poziciju u desno mijenjaš sa x, isto je bilo i sa slots y
+            // y = 0, y = slotsY
             for (int x = 1; x <= SlotsX; x++)
             {
                 Rect slotRect = new Rect(x*60,y*60, 50, 50);
