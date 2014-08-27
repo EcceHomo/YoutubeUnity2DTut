@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour {
     private Vector2 _direction;
 
     public static bool ShopActive;
+    public Transform Player;
 
 
 	// Use this for initialization
@@ -19,6 +20,7 @@ public class Shop : MonoBehaviour {
 	    if (!raycast)
 	    {
 	        ShopActive = false;
+	       // print(Player.position);
 	        return;
 	    }
 	    else

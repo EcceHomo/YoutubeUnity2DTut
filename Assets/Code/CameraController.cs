@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
         Smoothing;
 
     public BoxCollider2D Bounds;
+    public BoxCollider2D ShopBounds;
 
     private Vector3
         _min,
@@ -38,6 +39,13 @@ public class CameraController : MonoBehaviour
                 y = Mathf.Lerp(y, Player.position.y, Smoothing.y * Time.deltaTime);
 
         }
+
+        // Veličina kamere kada je Shop uključen
+        if (Shop.ShopActive)
+            Camera.main.orthographicSize = 5;
+
+        else if (!Shop.ShopActive)
+            Camera.main.orthographicSize = 9.52f;
 
         var cameraHalfWidth = camera.orthographicSize * ((float)Screen.width / Screen.height);
 

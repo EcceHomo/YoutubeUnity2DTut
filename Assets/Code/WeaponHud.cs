@@ -28,7 +28,7 @@ public class WeaponHud : MonoBehaviour {
         if (!Shop.ShopActive)
         {
             _showWaeponHud = true;
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0 || Input.GetButtonDown("Weapon1"))
             {
                 Player.IsFiring = true;
                 _showTooltip = false;
@@ -36,7 +36,7 @@ public class WeaponHud : MonoBehaviour {
                 print("Mouse ScrollWheel Up, Gun");
             }
 
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0 || Input.GetButtonDown("Weapon2"))
             {
                 if (_weaponDatabase.Items.Count <= 1)
                 {

@@ -54,10 +54,10 @@ public class Inventory : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
-            SaveInventory();
-        if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
-            LoadInventory();
+        //if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
+        //    SaveInventory();
+        //if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
+        //    LoadInventory();
 
         _tooltip = "";
         GUI.skin = skin;
@@ -83,7 +83,7 @@ public class Inventory : MonoBehaviour
         int i = 0;
         for (int y = 0; y < SlotsY; y++)
         {
-            for (int x = 0; x < SlotsX; x++)
+            for (int x = 1; x <= SlotsX; x++)
             {
                 Rect slotRect = new Rect(x*60,y*60, 50, 50);
                 GUI.Box(slotRect,"",skin.GetStyle("Slot"));
@@ -117,7 +117,8 @@ public class Inventory : MonoBehaviour
 
                         if (e.isMouse && e.type == EventType.mouseDown && e.button == 1)
                         {
-                            if (item.TypeOfItem == Item.ItemType.Consumable)
+                            // Minimalno 10 pointa za kupovinu oružja
+                            if (item.TypeOfItem == Item.ItemType.Consumable && GameManager.Instance.Points >= 10)
                             {
                                 UseConsumable(Slots[i], i, true);
                             }
@@ -169,17 +170,12 @@ public class Inventory : MonoBehaviour
 
     private void UseConsumable(Item item, int slot, bool deleteItem)
     {
-        switch (item.ItemID)
-        {
-            case 3:
-            {
-                //PlayerStats.IncreaseStat(statid, butfamount, buffduration);
-                GameManager.Instance.TakePoints(PointsToTake);  // uzmi 10 bodova na consumable
-                print("Used consumeable: "+item.ItemName);
-                _weaponDatabase.Items.Add(item);
-                break;
-            }
-        }
+                
+        //PlayerStats.IncreaseStat(statid, butfamount, buffduration);
+        GameManager.Instance.TakePoints(PointsToTake);  // uzmi 10 bodova na consumable
+        print("Used consumeable: "+item.ItemName);
+        _weaponDatabase.Items.Add(item);
+                
         if (deleteItem)
         {
             inventory[slot] = new Item();
