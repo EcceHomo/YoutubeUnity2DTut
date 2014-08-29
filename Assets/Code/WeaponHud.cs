@@ -78,19 +78,20 @@ public class WeaponHud : MonoBehaviour {
 
         if (_showTooltip)
         {
-            GUI.Box(new Rect(Event.current.mousePosition.x + 15f, Event.current.mousePosition.y, 200, 200), _tooltip, Skin.GetStyle("Tooltip"));
-        }
+            Skin.GetStyle("Tooltip").fontSize = Screen.width / 55; ;
+            GUI.Box(new Rect(Event.current.mousePosition.x + 15f, Event.current.mousePosition.y, Screen.width / 7f, Screen.height / 3f), _tooltip, Skin.GetStyle("Tooltip"));}
     }
 
     void DrawWeponGui(int id)
     {
-        Rect weponRect = new Rect(150, 10, 50, 50);
+        Rect weponRect = new Rect(Screen.width / 5f, Screen.height / 80f, Screen.width / 24f, Screen.height / 14f);
         GUI.Box(weponRect, "", Skin.GetStyle("Weapon"));
         if (SingleItem != _weaponDatabase.Items[0])
         {
             //GameManager.Instance.TakeAmmo(AmmoToTake);
             //print("AmmoToTake: " + AmmoToTake + " TotalAmmo: " + TotalAmmo);
-            GUI.Label(new Rect(154, 40, 50, 50), TotalAmmo.ToString()); // Ammo count
+            Skin.GetStyle("Ammo").fontSize = Screen.width / 100; ;
+            GUI.Label(new Rect(Screen.width / 5.1f, Screen.height / 26f, Screen.width / 24f, Screen.height / 14f), TotalAmmo.ToString(), Skin.GetStyle("Ammo")); // Ammo count
         }
 
         GUI.DrawTexture(weponRect, SingleItem.ItemIcone);
@@ -117,8 +118,8 @@ public class WeaponHud : MonoBehaviour {
 
     string CreateTooltip(Item item)
     {
-        _tooltip = "<color=#ff552a>" + item.ItemName + "</color>\n\n" + "<color=#d2d2fd>" + item.ItemDesc + "</color>\n\n"+
-            "<color=#d4ff2a>" + "Power: " + "</color>" + "<color=#000000>" + item.ItemPower + "</color>\n\n"+
+        _tooltip = "<color=#ff552a>" + item.ItemName + "</color>\n" + "<color=#d2d2fd>" + item.ItemDesc + "</color>\n\n"+
+            "<color=#d4ff2a>" + "Power: " + "</color>" + "<color=#000000>" + item.ItemPower + "</color>\n"+
              "<color=#d4ff2a>" + "Speed: " + "</color>" + "<color=#000000>" + item.ItemSpeed + "</color>";
         return _tooltip;
     }

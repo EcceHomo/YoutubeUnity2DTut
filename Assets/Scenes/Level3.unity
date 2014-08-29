@@ -1574,7 +1574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlotsX: 5
-  SlotsY: 4
+  SlotsY: 2
   skin: {fileID: 11400000, guid: d18a73473dae04e458b7623899fd77cd, type: 2}
   inventory: []
   Slots: []
@@ -6277,7 +6277,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1243288430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6763315, y: 6.93289995, z: 0}
+  m_LocalPosition: {x: 28.5564404, y: 8.74202538, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1287588497}

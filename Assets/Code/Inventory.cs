@@ -29,10 +29,7 @@ public class Inventory : MonoBehaviour
             inventory.Add(new Item());
         }
         _database = GameObject.FindGameObjectWithTag("Item Database").GetComponent<ItemDatabase>();
-        AddItem(0);
         AddItem(1);
-        AddItem(2);
-        AddItem(3);
         //RemoveItem(0);
         //print(InventoryContatins(1));
         _weaponDatabase = GameObject.FindGameObjectWithTag("Weapon Database").GetComponent<WeaponDatabase>();
@@ -54,11 +51,6 @@ public class Inventory : MonoBehaviour
 
     void OnGUI()
     {
-        //if (GUI.Button(new Rect(40, 400, 100, 40), "Save"))
-        //    SaveInventory();
-        //if (GUI.Button(new Rect(40, 450, 100, 40), "Load"))
-        //    LoadInventory();
-
         _tooltip = "";
         GUI.skin = skin;
         if (_showInventroy)
@@ -68,12 +60,13 @@ public class Inventory : MonoBehaviour
 
         if (_showTooltip)
         {
-            GUI.Box(new Rect(Event.current.mousePosition.x + 15f, Event.current.mousePosition.y, 200, 200), _tooltip, skin.GetStyle("Tooltip") );
+            skin.GetStyle("Tooltip").fontSize = Screen.width / 55; ;
+            GUI.Box(new Rect(Event.current.mousePosition.x + 15f, Event.current.mousePosition.y, Screen.width / 7f, Screen.height / 3f), _tooltip, skin.GetStyle("Tooltip"));
         }
 
         if (_draggingItem)
         {
-            GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 50, 50),_draggedItem.ItemIcone);
+            GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, Screen.width / 24f, Screen.height / 14f), _draggedItem.ItemIcone);
         }
     }
 
@@ -81,14 +74,14 @@ public class Inventory : MonoBehaviour
     {
         Event e = Event.current;
         int i = 0;
-        for (int y = 1; y <= SlotsY; y++)
+        for (int y = 3; y < SlotsY+3; y++)
         {
             // Počinjalo je od o te je bilo samo manje < od slotsx
             // poziciju u desno mijenjaš sa x, isto je bilo i sa slots y
             // y = 0, y = slotsY
-            for (int x = 1; x <= SlotsX; x++)
+            for (int x = 8; x < SlotsX+8; x++)
             {
-                Rect slotRect = new Rect(x*60,y*60, 50, 50);
+                Rect slotRect = new Rect(x * (Screen.width / 23), y * (Screen.height / 13), Screen.width / 24f, Screen.height / 14f);
                 GUI.Box(slotRect,"",skin.GetStyle("Slot"));
                 Slots[i] = inventory[i];
                 Item item = Slots[i];
@@ -121,9 +114,9 @@ public class Inventory : MonoBehaviour
                         if (e.isMouse && e.type == EventType.mouseDown && e.button == 1)
                         {
                             // Minimalno 10 pointa za kupovinu oružja
-                            if (item.TypeOfItem == Item.ItemType.Consumable && GameManager.Instance.Points >= 10)
+                            if (item.TypeOfItem == Item.ItemType.Weapon && GameManager.Instance.Points >= 10)
                             {
-                                UseConsumable(Slots[i], i, true);
+                                BuyWeapon(Slots[i], i, true);
                             }
                         }
 
@@ -171,7 +164,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void UseConsumable(Item item, int slot, bool deleteItem)
+    private void BuyWeapon(Item item, int slot, bool deleteItem)
     {
                 
         //PlayerStats.IncreaseStat(statid, butfamount, buffduration);
@@ -201,33 +194,5 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
-    }
-
-    bool InventoryContatins(int id)
-    {
-        bool result = false;
-        for (int i = 0; i < inventory.Count; i++)
-        {
-            result = inventory[i].ItemID == id;
-            if (result)
-            {
-                break;
-            }
-        }
-        return result;
-    }
-
-    void SaveInventory()
-    {
-        for (int i = 0; i < inventory.Count; i++)
-        PlayerPrefs.SetInt("Inventory " + i, inventory[i].ItemID);
-    }
-
-    void LoadInventory()
-    {
-        for (int i = 0; i < inventory.Count; i++)
-            inventory[i] = PlayerPrefs.GetInt("Inventory " + i, -1) >= 0
-                ? _database.Items[PlayerPrefs.GetInt("Inventory " + i)]
-                : new Item();
     }
 }
