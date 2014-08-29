@@ -4,6 +4,13 @@ public class GameHud : MonoBehaviour
 {
     public GUISkin Skin;
 
+    private bool _paused = false;
+    private void Update()
+    {
+        if (Input.GetButtonDown("pauseButton"))
+            _paused = togglePause();
+    }
+
     public void OnGUI()
     {
         GUI.skin = Skin;
@@ -18,8 +25,8 @@ public class GameHud : MonoBehaviour
                 var time = LevelManager.Instance.RunningTime;
 
                 GUILayout.Label(string.Format(
-                    "{0:00}:{1:00} with {2} bonus", 
-                    time.Minutes + (time.Hours * 60),
+                    "{0:00}:{1:00} with {2} bonus",
+                    time.Minutes + (time.Hours*60),
                     time.Seconds,
                     LevelManager.Instance.CurrentTimeBonus), Skin.GetStyle("TimeText"));
             }
@@ -28,7 +35,27 @@ public class GameHud : MonoBehaviour
         }
 
         GUILayout.EndArea();
+
+        if (_paused)
+        {
+            GUILayout.Label("Game is paused!");
+            if (GUILayout.Button("Click me to unpause"))
+                _paused = togglePause();
+        }
     }
-
-
+    bool togglePause()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            GameObject.Find("Theme").audio.Play();
+            return (false);
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            GameObject.Find("Theme").audio.Stop();
+            return (true);
+        }
+    }
 }
