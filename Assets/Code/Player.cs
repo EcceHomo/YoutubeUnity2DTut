@@ -35,7 +35,6 @@ public class Player : MonoBehaviour, ITakeDamage
         _controller = GetComponent<CharacterController2D>();
         _isFacingRight = transform.localScale.x > 0;
         Health = MaxHealth;
-
     }
 
     public void Update()

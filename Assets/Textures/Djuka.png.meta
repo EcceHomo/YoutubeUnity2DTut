@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 057a3ea153cad9f4080ecef122e9c44f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: character 2
+    21300002: Djuka
+    21300004: Torzo
+    21300006: Nadlaktica_L
+    21300008: Nadlaktica_D
+    21300010: Nadkoljenica_L
+    21300012: Podlaktica_L
+    21300014: Podlaktica_D
+    21300016: Nadkoljenica_D
+    21300018: Podkoljenica_D
+    21300020: Podkoljenica_D
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Torzo
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 354
+        width: 218
+        height: 344
+      alignment: 9
+      pivot: {x: .551057041, y: .2465453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadlaktica_L
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 430
+        width: 84
+        height: 151
+      alignment: 9
+      pivot: {x: .688200474, y: .833118558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadlaktica_D
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 451
+        width: 83
+        height: 152
+      alignment: 9
+      pivot: {x: .240270406, y: .840381801}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadkoljenica_L
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 271
+        width: 102
+        height: 170
+      alignment: 9
+      pivot: {x: .58161819, y: .773641765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podlaktica_L
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 149
+        width: 81
+        height: 248
+      alignment: 9
+      pivot: {x: .5, y: .901583374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podlaktica_D
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 169
+        width: 119
+        height: 227
+      alignment: 9
+      pivot: {x: .263375938, y: .905531824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nadkoljenica_D
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 241
+        width: 91
+        height: 160
+      alignment: 9
+      pivot: {x: .213367507, y: .83639127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podkoljenica_D
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 41
+        width: 69
+        height: 193
+      alignment: 9
+      pivot: {x: .520903885, y: .94392705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Podkoljenica_D
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 74
+        width: 139
+        height: 163
+      alignment: 9
+      pivot: {x: .16424033, y: .892049193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
